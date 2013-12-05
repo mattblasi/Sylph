@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/colors.css" />
+
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	<div class="content">
+    
+	    <header id="site-head">
+	    	<section class="social">
+	    		{{> sociallinks}}
+	    	</section>
+	    	
+	    	<section class="header">
+	    		{{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}" title="{{@blog.title}} Home"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+	    		<h1 class="blog-title"><a href="/">{{@blog.title}}</a></h1>
+	    		<nav>
+		    		<a href="#" title="Close" class="close hidden" data-block="close"><i class="fa fa-times"></i></a>
+	    			<a href="#" title="Show Nav" class="social-nav" data-block="social"><i class="fa fa-bars"></i></a>
+	    			<a href="{{@blog.url}}/rss/" title="Show Nav" class="nav" data-block="blog"><i class="fa fa-rss"></i></a>
+	    		</nav>
+	    		<div class="clearfix"></div>
+	    	</section>
+	    	
+	    	<section class="contact">
+	    		<h2>Contact Info:</h2>
+	    		<form id="contact-form" action="/" method="post">
+	                <label><span>Name:</span><input placeholder="Please enter your name" type="text" tabindex="1" required autofocus></label>
+	                <label><span>Email:</span><input placeholder="Please enter your email address" type="email" tabindex="2" required></label>
+	                <label><span>Telephone:</span><input placeholder="Please enter your number" type="tel" tabindex="3" required></label>
+	                <label><span>Message:</span><textarea placeholder="Include all the details you can" tabindex="5" required></textarea></label>
+	                <button name="submit" type="submit" id="contact-submit">Send Email</button>
+	    		</form>
+	    	</section>
+	    	
+	    	<section class="user">
+	    		<h2>User Info:</h2>
+	    	</section>
+	    </header>
+	    
+	    {{{body}}}
+	    
+    	<section id="social-twitter">
+    		<span class="social-twitter-icon"><i class="fa fa-twitter"></i></span> 
+    		<div id="social-twitter-tweet"></div>
+    		<div class="clearfix"></div>
+    	</section>
+	    
+	    <footer id="site-footer">
+	        <div class="inner">
+	             <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</section>
+	             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
+	        </div>
+	    </footer>
+	</div>
+	<div class="clearfix"></div>
+	
+    {{ghost_foot}}
+    
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.min.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.imagesloaded.min.js"></script>
+    <script type="text/javascript" src="https://dl.dropboxusercontent.com/u/37892603/skrollr/src/skrollr.js"></script>
+    <script type="text/javascript" src="/assets/js/twitterFetcher_v10_min.js"></script>
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+
+</body>
+</html>

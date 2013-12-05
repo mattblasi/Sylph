@@ -1,0 +1,1142 @@
+/*
+Theme Name: 	Sylph - female spirit in who lived in the air
+Theme Author: 	Matt Blasi - mattblasi@me.com
+Theme Website: 	http://simplistic.mattblasi.com
+*/
+
+/* ==========================================================================
+   Table of Contents
+   ========================================================================== */
+
+/*
+
+    0.  Includes & Icons
+    1.  Setup
+    2.  General
+    3.  Header
+    4.  Post Listing
+    5.  Single Post
+    6.  Third Party Elements
+    7.  Pagination
+    8.  Footer
+    9.  Media Queries (Tablet)
+    10. Media Queries (Mobile)
+
+ */
+
+/* ==========================================================================
+   0. Includes - & Icons
+   ========================================================================== */
+
+@import url(normalize.css);
+@import url(font-awesome.min.css);
+
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold-webfont.eot');
+    src: url('../fonts/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-bold-webfont.woff') format('woff'),
+         url('../fonts/raleway-bold-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-bold-webfont.svg#ralewaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaythin';
+    src: url('../fonts/raleway-thin-webfont.eot');
+    src: url('../fonts/raleway-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-thin-webfont.woff') format('woff'),
+         url('../fonts/raleway-thin-webfont.ttf') format('truetype'),
+         url('../fonts/raleway-thin-webfont.svg#ralewaythin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Import the font file with the icons in it */
+@font-face {
+    font-family: 'icons';
+    src:url('../fonts/icons.eot');
+    src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/icons.woff') format('woff'),
+        url('../fonts/icons.ttf') format('truetype'),
+        url('../fonts/icons.svg#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply these base styles to all icons */
+.icon-ghost, .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
+    font-family: 'icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
+
+/* Each icon is created by inserting the corret character into the 
+   content of the :before pseudo element. Like a boss. */
+.icon-ghost:before {
+    content: "\e000";
+    margin-right: 5px;
+}
+.icon-feed:before {
+    content: "\e001";
+}
+.icon-twitter:before {
+    content: "\e002";
+    font-size: 1.1em;
+}
+.icon-google-plus:before {
+    content: "\e003";
+}
+.icon-facebook:before {
+    content: "\e004";
+}
+
+/* ==========================================================================
+   1. General
+   ========================================================================== */
+
+html {
+    height: 100%;
+    max-height: 100%;
+    font-size: 52.5%;
+    position: relative;
+}
+
+body {
+	background: #f0f2f3;
+    display: block;
+	font: 1.5rem "Lucida Grande", Lucida, Verdana, sans-serif;
+	line-height: 2.5em;
+	letter-spacing: .1rem;
+	position: relative;
+    color: #8c9196;
+}
+
+::-moz-selection {
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+}
+
+::selection {
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin-top: 0;
+}
+
+h1 {
+	font-family: 'ralewaybold', sans-serif;
+    font-size: 3rem;
+    line-height: 1.2em;
+    letter-spacing: .25rem;
+    text-indent: -3px;
+    text-transform: uppercase;
+}
+
+h2 {
+	font-family: 'ralewaybold', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.2em;
+    letter-spacing: .25rem;
+    text-indent: -2px;
+    text-transform: uppercase;
+}
+
+h3 {
+	font-family: 'ralewaythin', sans-serif;
+    font-size: 2.5rem;
+}
+
+h4 {
+	font-family: 'ralewaythin', sans-serif;
+    font-size: 2.25rem;
+}
+
+h5 {
+	font-family: 'ralewaythin', sans-serif;
+    font-size: 2.1rem;
+}
+
+h6 {
+	font-family: 'ralewaythin', sans-serif;
+    font-size: 2rem;
+}
+
+a {
+    color: #4a4a4a;
+    transition: color ease 0.3s;
+}
+
+a:hover {
+    color: #57A3E8;
+}
+
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+    color: #50585D;
+}
+
+
+p, ul, ol {
+    margin: 1.6em 0;
+}
+
+ol ol, ul ul,
+ul ol, ol ul {
+    margin: 0.4em 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #efefef;
+    margin: 3.2em 0;
+    padding: 0;
+}
+
+blockquote {
+    font-family: 'ralewaythin';
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 2em auto;
+    padding: 0 0 0 1.6em;
+    font-size: 1.5em;
+    font-style: normal;
+    border-left: #4a4a4a 0.4em solid;
+}
+
+blockquote p {
+    margin: 0.8em 0;
+    font-style: italic;
+}
+
+blockquote small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;;
+    font-size:0.9em;
+    color: #ccc;
+}
+
+blockquote small:before { content: '\2014 \00A0'; }
+
+blockquote cite {
+    font-weight:bold;
+}
+
+blockquote cite a { font-weight: normal; }
+
+
+dl {
+    margin: 1.6em 0;
+}
+
+dl dt {
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 1em
+}
+
+dl dd {
+    margin-left: 200px;
+    margin-bottom: 1em
+}
+
+mark {
+    background-color: #ffc336;
+}
+
+code, tt {
+	display: block;
+    padding: 10px;
+    overflow-x: scroll;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.85em;
+    white-space: pre;
+    border: 1px solid #E3EDF3;
+    background: #F7FAFB;
+    border-radius: 2px;
+}
+
+pre {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    border: 1px solid #E3EDF3;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9em;
+    white-space: pre;
+    overflow: auto;
+    background: #F7FAFB;
+    border-radius: 3px;
+}
+
+pre code, tt {
+    font-size: inherit;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+kbd {
+    display: inline-block;
+    margin-bottom: 0.4em;
+    padding: 1px 8px;
+    border: #ccc 1px solid;
+    color: #666;
+    text-shadow: #fff 0 1px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    background: #f4f4f4;
+    border-radius: 4px;
+    box-shadow: 
+        0 1px 0 rgba(0, 0, 0, 0.2), 
+        0 1px 0 0 #fff inset;
+}
+
+table {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    width:100%;
+    max-width: 100%;
+    background-color: transparent;
+}
+
+table th,
+table td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #efefef;
+}
+
+table th { color: #000; }
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+    border-top: 0;
+}
+
+table tbody + tbody { border-top: 2px solid #efefef; }
+
+table table table { background-color: #fff; }
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+    background-color: #f6f6f6;
+}
+
+table.plain {
+    tbody > tr:nth-child(odd) > td,
+    tbody > tr:nth-child(odd) > th {
+        background: transparent;
+    }
+}
+
+img {
+	max-width: 100%;
+	opacity: 0;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		-ms-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.hidden {
+	display: none!important;
+}
+
+.blogger:hover,
+.rss:hover {
+	color: #FF8833!important;
+}
+
+.facebook:hover {
+	color: #EB5998!important;
+}
+
+.flickr:hover {
+	color: #FE0883!important;
+}
+
+.foursquare:hover {
+	color: #0072B1!important;
+}
+
+.google:hover {
+	color: #C63d2D!important;
+}
+
+.instagram:hover {
+	color: #4E433C!important;
+}
+
+.linkedin:hover {
+	color: #4875B4!important;
+}
+
+.pinterest:hover {
+	color: #910101!important;
+}
+
+.tumblr:hover {
+	color: #34526F!important;
+}
+
+.twitter:hover {
+	color: #00A0D1!important;
+}
+
+.vimeo:hover {
+	color: #44BBFF!important;
+}
+
+.youtube:hover {
+	color: #C4302B!important;
+}
+
+.blogger-rev:hover,
+.rss-rev:hover {
+	background-color: #FF8833!important;
+}
+
+.facebook-rev:hover {
+	background-color: #EB5998!important;
+}
+
+.flickr-rev:hover {
+	background-color: #FE0883!important;
+}
+
+.foursquare-rev:hover {
+	background-color: #0072B1!important;
+}
+
+.google-rev:hover {
+	background-color: #C63d2D!important;
+}
+
+.instagram-rev:hover {
+	background-color: #4E433C!important;
+}
+
+.linkedin-rev:hover {
+	background-color: #4875B4!important;
+}
+
+.pinterest-rev:hover {
+	background-color: #910101!important;
+}
+
+.tumblr-rev:hover {
+	background-color: #34526F!important;
+}
+
+.twitter-rev:hover {
+	background-color: #00A0D1!important;
+}
+
+.vimeo-rev:hover {
+	background-color: #44BBFF!important;
+}
+
+.youtube-rev:hover {
+	background-color: #C4302B!important;
+}
+
+.readmore {
+	float: right;
+	font-family: 'ralewaybold', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    letter-spacing: .15rem;
+    text-indent: -3px;
+    text-transform: uppercase;
+	text-decoration: none;
+}
+
+.readmore i {
+	margin-left: 5px;
+}
+
+/* ==========================================================================
+   2. General
+   ========================================================================== */
+
+div.content {
+	background: none;
+	margin: 50px auto;
+	width: 80%;
+	overflow: hidden;
+	max-width: 900px;
+	background: #FFF;
+		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+		-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1) 0 8px rgba(0, 0, 0, 0.1);
+		-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1) 0 8px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1) 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#site-head, #site-footer, main#main {
+	background: #fff;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+}
+
+
+/* ==========================================================================
+   3. Header
+   ========================================================================== */
+
+#site-head {
+	background: #000;
+}
+
+#site-head section {
+	display: none;
+}
+
+#site-head .header {
+	display: block;
+	padding: 25px 100px;
+}
+
+.header h1 {
+	display:block;
+	float:left;
+	max-width:49%;
+	margin:0;
+	padding:5px 0;
+}
+
+.header h1 a {
+	text-decoration:none;
+}
+
+.header nav {
+	display: block;
+	float: right;
+	max-width: 49%;
+}
+
+.header nav a {
+	display: inline-block;
+	font-size: 1em;
+	padding: 5px;
+}
+
+.social {
+	background: #222;
+	font-size: 1.2em;
+	padding: 25px 0;
+	text-align: center;
+}
+
+.social a {
+	color: #ccc;
+	display: inline-block;
+	padding: 0 5px;
+}
+
+.social a:hover {
+	color: #fff;
+}
+
+.blog-info {
+	background-color: #ccc;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	color: #fff;
+	display: block;
+	height: 70%;
+	padding: 100px;
+}
+
+.blog-info h1,
+.blog-info h2 {
+	border-bottom: 1px solid #fff;
+	margin: 0 0 15px;
+	padding-bottom: 15px;
+	text-indent: 0;
+}
+
+.blog-info h3 {
+	line-height: 1.25;
+}
+
+.blog-info h4 {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+}
+
+.blog-info a {
+	border: 2px solid #fff;
+	color: #fff;
+	display: inline-block;
+	margin: 15px 0 0;
+	padding: 3px 10px;
+	text-decoration: none;
+}
+
+.blog-info .blog-comments {
+	border: none;
+	float: right;
+	margin-top: -75px;
+	padding: 0;
+}
+
+.blog-info .post-nav {
+	
+}
+
+.blog-info .post-nav .prev,
+.blog-info .post-nav .next {
+	border: none;
+	float: left;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+.blog-info .post-nav .next {
+	float: right;	
+}
+
+#site-head section.show {
+	display: block;
+	height:auto;
+}
+
+/* ==========================================================================
+   4. Post General & Listings
+   ========================================================================== */
+   
+.post {
+	border-bottom: 1px solid #eee;
+	clear: both;
+	display: block;
+	position: relative;
+}
+
+.post-template .post {
+	border-bottom: none!important;
+}
+
+.post-image,
+.post-image p {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.post-image {
+	background-color: #ccc;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 200px;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+.post-header {
+	display: block;
+	padding: 40px 100px 0;
+	position: relative;
+	z-index: 2;
+}
+
+.post-excerpt,
+.post-footer {
+	display: block;
+	padding: 0 100px 25px;
+	position: relative;
+	z-index: 2;
+}
+
+.post-content {
+	border-top: 1px solid #eee;
+	display: block;
+	margin: 25px 0 0;
+	padding: 50px 100px 25px;
+	position: relative;
+	z-index: 2;
+}
+
+.post-title,
+.post-title a {
+	font-size: 2.5rem;
+	letter-spacing: .25rem;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.post-meta {
+	font-size: 1.75rem;
+}
+
+.post-footer {
+	background: #ccc;
+	padding-top: 25px;
+}
+
+.social-share {
+	display: block;
+	float: right;
+}
+
+.social-share span {
+	display: block;
+	float: left;
+	padding: 3px 15px 0;
+}
+
+.social-share a {
+	background: #eee;
+	color: #333;
+	display: block;
+	float: left;
+	height: 15px;
+	padding: 10px 15px;
+	width: 15px;
+}
+
+.social-share a:hover {
+	box-shadow: 0px 0px 2px 0px #333 inset;
+	color: #fff;
+	text-shadow: 1px 1px 3px #333;
+}
+
+.post-content .video {
+	margin-bottom: 25px;
+}
+
+
+/* ==========================================================================
+   5. Single Post & Author
+   ========================================================================== */
+
+.author {
+	color: #333;
+}
+
+.author a {
+	color: #444;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.author a:hover {
+	color: #fff;
+}
+
+.author-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	-webkit-border-radius: 60px;
+	-moz-border-radius: 60px;
+	border-radius: 60px;
+	border: 5px solid #fff;
+	display: block;
+	float: left;
+	height: 100px;
+	margin: 0 15px 15px 0;
+	width: 100px;
+}
+
+.author-title {
+	display: block;
+	margin: 0;
+} 
+
+.author-email {
+	display: block;
+	font-family: 'ralewaythin';
+	line-height: 2rem;
+	margin: 0;
+	text-decoration: none;
+}
+
+.author-website {
+	display: block;
+	font-family: 'ralewaythin';
+	line-height: 2rem;
+	margin: 0;
+	text-decoration: none;
+}
+
+.author-bio {
+	/*clear: both;*/
+	display: block;
+	line-height: 2.5rem;
+	margin: 15px 0 0;
+}
+
+.content .comments {
+	border-top: 4px double #ddd;
+	display: block;
+	padding: 50px 100px;
+}
+
+.fb-comments, .fb-comments span[style],
+.fb-comments, .fb-comments iframe[style] {width: 100% !important;}
+
+/* ==========================================================================
+   7. Pagination
+   ========================================================================== */
+
+.pagination {
+	background: #ccc;
+	display: block;
+	padding: 50px 100px;
+	position: relative;
+}
+
+.pagination a.to-top {
+	display: inline-block;
+	color: #FFF;
+	background: #333;
+		-webkit-border-radius: 20px 20px 0 0;
+		-moz-border-radius: 20px 20px 0 0;
+	border-radius: 20px 20px 0 0;
+	border: none;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+	box-shadow: none;
+	padding: 15px;
+	line-height: 14px;
+	padding-bottom: 6px;
+	text-align: center;
+	font-size: 12px;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		-ms-transition: all 0.3s;
+	transition: all 0.3s;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -21px;
+}
+
+.pagination .page-number {
+	color: #FFF;
+	background: rgba(0,0,0,0.1);
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	border: none;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+	float: left;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	padding: 10px;
+	padding-top: 6px;
+	line-height: 14px;
+	padding-bottom: 6px;
+	text-align: center;
+	font-size: 12px;
+}
+
+.pagination .page-control {
+	display: block;
+	float: right;
+}
+
+.pagination .page-control a {
+	float: left;
+	display: inline-block;
+	color: #FFF;
+	background: rgba(0, 0, 0, 0.1);
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	border: none;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	padding: 10px;
+	padding-top: 6px;
+	line-height: 14px;
+	padding-bottom: 6px;
+	text-align: center;
+	font-size: 12px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-left: 5px;
+}
+
+.pagination .page-control a:hover {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.pagination .page-control a.inactive {
+	background: rgba(0, 0, 0, 0.3);
+	cursor: default;
+}
+
+.pagination .older-posts {
+	
+}
+
+.pagination .newer-posts {
+	
+}
+
+/* ==========================================================================
+   8. Footer
+   ========================================================================== */
+
+#site-footer {
+	
+}
+
+#site-footer .inner {
+	background: #333;
+	color: #ddd;
+	display: block;
+	padding: 50px 100px;
+	text-align: center;
+}
+
+#site-footer .inner a {
+	color: #ccc;
+}
+
+#site-footer .inner a:hover {
+	color: #fff;
+}
+
+#social-twitter {
+	background: #444;
+	color: #fff;
+	display: block;
+	margin: 0;
+	padding: 15px 100px;
+}
+
+#social-twitter .social-twitter-icon {
+	display: inline-block;
+	float: left;
+	text-align: left;
+}
+
+#social-twitter i {
+	font-size: 3rem;
+	padding: 15px;
+}
+
+#social-twitter ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#social-twitter-tweet {
+	line-height: 1.5;
+	margin-top: -5px;
+	text-align: left;
+}
+
+#social-twitter-tweet .interact {
+	display: none;
+}
+
+
+/* ==========================================================================
+   9. Media Queries - Smaller than 900px
+   ========================================================================== */
+
+@media only screen and (max-width: 1024px) {
+	body {
+		font-size: 1.7em;
+		line-height: 2em;
+	}
+	div.content {
+		background: none;
+		margin: 0;
+		width: 100%;
+		max-width: 1024px;
+		overflow: hidden;
+	}
+	#site-head .header {
+		padding: 5px 5%;
+	}
+	#site-head .header h1 {
+		padding: 10px 0;
+	}
+	#site-head .header nav {
+		font-size: 3rem;
+	}
+	#site-head .header nav a {
+		padding: 10px;
+	}
+	.social {
+		padding: 5px 0;
+	}
+	.social a {
+		color: #ccc;
+		font-size: 3rem;
+		padding: 10px;
+	}
+	.blog-info {
+		color: #fff;
+		display: block;
+		padding: 150px 5%;
+	}
+	.post {
+		padding-bottom: 15px;
+	}
+	.post-template .post {
+		padding-bottom: 0;
+	}
+	.post-header {
+		padding: 40px 5% 0;
+	}
+	.post-excerpt,
+	.post-footer {
+		padding: 0 5% 25px;
+	}
+	.post-footer {
+		padding-top: 25px;
+	}
+	.post-content {
+		padding: 50px 5%;
+	}
+	.content .comments {
+		display: block;
+		padding: 25px;
+	}
+	.social-share span {
+		font-size: 2rem;
+		padding: 15px 15px 0;
+	}
+	.social-share a {
+		font-size: 2rem;
+		padding: 20px 25px;
+	}
+	.pagination {
+		padding: 50px 25px;
+	}
+	#social-twitter {
+		padding: 15px 25px;
+	}
+	#social-twitter-tweet {
+		display: block;
+		float: left;
+		width: 80%;
+	}
+}
+
+/* ==========================================================================
+   10. Media Queries - Smaller than 500px
+   ========================================================================== */
+
+@media only screen and (max-width: 500px) {
+	#site-head .header {
+		padding: 25px 25px;
+	}
+	.blog-info {
+		color: #fff;
+		display: block;
+		padding: 100px 15px 200px;
+	}
+	.post-header {
+		padding: 40px 15px 0;
+	}
+	.post-excerpt,
+	.post-footer {
+		padding: 0 15px 25px;
+	}
+	.post-footer {
+		padding-top: 25px;
+	}
+	.post-content {
+		padding: 25px 15px;
+	}
+	.author-bio {
+		font-size: 1.3rem;
+	}
+	#site-footer .inner {
+		font-size: 1.2rem;
+		padding: 25px 15px;
+	}
+	.content .comments {
+		display: block;
+		padding: 25px;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.social-share span {
+		font-size: 1.5rem;
+	}
+	.social-share a {
+		padding: 20px;
+	}
+}
+
+
+
+
+
+
+
+
+

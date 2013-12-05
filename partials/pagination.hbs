@@ -1,0 +1,17 @@
+<nav class="pagination" role="pagination">
+	<a href="#main" class="to-top"><i class="fa fa-chevron-up"></i></a>
+	<span class="page-number">{{page}} - {{pages}}</span>
+	<span class="page-control">
+    {{#if prev}}
+        <a class="newer-posts" href="{{pageUrl prev}}"><i class="fa fa-chevron-left"></i></a>
+    {{else}}
+    	<a class="newer-posts inactive" href="#"><i class="fa fa-chevron-left"></i></a>
+    {{/if}}
+    {{#if next}}
+        <a class="older-posts" href="{{pageUrl next}}"><i class="fa fa-chevron-right"></i></a>
+    {{else}}
+    	<a class="older-posts inactive" href="#"><i class="fa fa-chevron-right"></i></a>
+    {{/if}}
+    </span>
+    <div class="clearfix"></div>
+</nav>

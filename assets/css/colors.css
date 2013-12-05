@@ -1,0 +1,183 @@
+body {
+	background: #eceef1;
+    color: #777;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #a4ceac;
+}
+
+::selection {
+    color: #fff;
+    background: #a4ceac;
+}
+
+a {
+    color: #94C7B6;
+}
+
+a:hover {
+    color: #888;
+}
+
+h1 a, h2 a, h3 a,
+h4 a, h5 a, h6 a {
+    color: #a4ceac;
+}
+
+hr {
+    border-top-color: #efefef;
+}
+
+blockquote {
+    border-left-color: #4a4a4a;
+}
+
+blockquote small {
+    color: #ccc;
+}
+
+mark {
+    background-color: #ffc336;
+}
+
+code, tt {
+    border-color: #E3EDF3;
+    background: #F7FAFB;
+}
+
+pre {
+    border-color: #E3EDF3;
+    background: #F7FAFB;
+}
+
+kbd {
+    border-color: #ccc;
+    color: #666;
+    text-shadow: #fff 0 1px 0;
+    background: #f4f4f4;
+}
+
+table th { color: #000; }
+
+table tbody + tbody { border-top-color: #efefef; }
+
+table table table { background-color: #fff; }
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+    background-color: #f6f6f6;
+}
+
+div.content {
+	background: #FFF;
+}
+
+#site-head, #site-footer, main#main {
+	background: #fff;
+}
+
+#site-head {
+	background: #222;
+}
+
+.social {
+	background: #333;
+}
+
+.social a {
+	color: #ccc;
+}
+
+.social a:hover {
+	color: #fff;
+}
+
+.blog-info {
+	background-color: #a4ceac;
+}
+
+.blog-info a {
+	border-color: #fff;
+	color: #fff;
+}
+ 
+.post {
+	border-bottom-color: #eee;
+}
+
+.post-image {
+	background-color: #eee;
+}
+
+.post-content {
+	border-top-color: #eee;
+}
+
+.post-footer {
+	background: #a4ceac;
+	color: #fff;
+}
+
+.social-share a {
+	background: #eee;
+	color: #333;
+}
+
+.author {
+	color: #fff;
+}
+
+.author a {
+	color: #222;
+}
+
+.author a:hover {
+	color: #fff;
+}
+
+.pagination {
+	background: #a4ceac;
+}
+
+.pagination a.to-top {
+	color: #FFF;
+	background: #444;
+}
+
+.pagination a.to-top:hover {
+	color: #FFF;
+	background: #444;
+}
+
+.pagination .page-number {
+	color: #FFF;
+	background: rgba(0,0,0,0.1);
+}
+
+.pagination .page-control a {
+	color: #FFF;
+	background: rgba(0, 0, 0, 0.1);
+}
+
+.pagination .page-control a:hover {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.pagination .page-control a.inactive {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+#site-footer .inner {
+	background: #333;
+	color: #ddd;
+}
+
+#site-footer .inner a {
+	color: #ccc;
+}
+
+#site-footer .inner a:hover {
+	color: #fff;
+}
