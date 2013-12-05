@@ -1,9 +1,8 @@
 Sylph
 =====
+### Sylph - Ghost Theme
 
-Sylph - Ghost Theme
-
-Sylph is a minimalistic responsive theme built for Ghost (http://ghost.org). As the functionality of Ghost grows so will some of the functionality within the theme.
+Sylph is a minimalistic responsive theme built for Ghost (http://ghost.org). As the functionality of Ghost grows so will some of the functionality within the theme.  Designed to be easy to use while expanding it's overall functionality as Ghost grows.
 
 Features
 ========
@@ -20,9 +19,7 @@ Features
 
 Install & Troubleshooting
 =========================
-
 ### BEFORE YOU UPLOAD:
-
 ### Twitter Widget:
 * If you do not set up the widget ID then the widget will not be displayed
 
@@ -53,7 +50,6 @@ Install & Troubleshooting
 2) For each link you want to show find href="your/link/url" and put in yout URL
 
 ### NOW YOU ARE READY TO INSTALL THE THEME
-
 ### Install Theme:
 1) Upload Sylph theme folder to root/content/themes/
 
@@ -67,11 +63,6 @@ Install & Troubleshooting
 
 * The second restart is because I have noticed that override partials such as the one
 Sylph uses for it's pagination do not always take effect by just switchign the theme.
-
-
-
- 
-
 
 Included Scripts & Resources
 ============================
