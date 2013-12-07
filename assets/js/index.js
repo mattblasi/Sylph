@@ -2,6 +2,8 @@
 
     $(document).ready(function(){    
 		
+		$('html.no-js').removeClass('no-js');
+		
 		// Manages Smooth Scrolling For Hashes.
 		(function(){
 	        $('a[href^=#]').on("click",function(){
@@ -63,6 +65,15 @@
         (function(){
         	$('.inactive').bind('click',function(e){e.preventDefault();});
         })();
+        
+        /* Site Social Links */
+        (function() {
+        	$('#site-head .social a[href*=your-link-url]').remove();
+        	if($('#site-head .socail').length == 0) {
+        		$('#site-head .social').remove();
+        		$('#site-head nav .social-nav').remove();
+        	}
+        })();
 		
 		/* Site Wide Header Links */
 		(function() {
@@ -87,11 +98,26 @@
 		
 		/* Twitter */
 		(function(){
-			var widgetID = '408185639436169217'
-			if(widgetID!=''){
+			var widgetID = $('#social-twitter').attr('data-twitter-id');
+			if(widgetID!='' && widgetID!='your-widget-number'){
 				twitterFetcher.fetch( widgetID, 'social-twitter-tweet', 1, true, false, false, '', false);
 			}else{
 				$('#social-twitter').remove();
+				var bgColor = $('footer#site-footer .inner').css('background-color');
+				var bgNew   = hexc(bgColor);
+				$('nav.pagination a[href*=#main]').css({'background-color':bgNew});
+			}
+			
+			// converts background color to hex
+			function hexc(colorval) {
+			    var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+			    delete(parts[0]);
+			    for (var i = 1; i <= 3; ++i) {
+			        parts[i] = parseInt(parts[i]).toString(16);
+			        if (parts[i].length == 1) parts[i] = '0' + parts[i];
+			    }
+			    color = '#' + parts.join('');
+			    return color;
 			}
 		})();
 

@@ -1,0 +1,20 @@
+/* A few simple adjustments when no JS */
+.no-js img {
+	opacity: 1;
+}
+
+/* Items to show when no JS */
+.no-js #site-head section {
+	display: block;
+}
+
+/* Items to hide when no JS */
+.no-js #site-head .social-nav,
+.no-js .post-excerpt iframe,
+.no-js #social-twitter {
+	display: none;
+}
+
+.no-js .pagination a.to-top {
+	background: #333;
+}

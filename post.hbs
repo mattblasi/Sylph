@@ -3,7 +3,6 @@
 {{#post}}
 
 <section class="blog-info" {{#if @blog.cover}}style="background-image:url({{@blog.cover}});"{{/if}}>
-	
 	<h1 class="post-title">{{{title}}}</h1>
 	<h3 class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></h3>
 	<h4 class="post-tags">{{#if tags}}Tags: {{tags separator=", "}}{{/if}}</h4>

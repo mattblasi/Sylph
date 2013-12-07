@@ -5,16 +5,16 @@ body {
 
 ::-moz-selection {
     color: #fff;
-    background: #a4ceac;
+    background: #135680;
 }
 
 ::selection {
     color: #fff;
-    background: #a4ceac;
+    background: #135680;
 }
 
 a {
-    color: #94C7B6;
+    color: #135680;
 }
 
 a:hover {
@@ -23,7 +23,7 @@ a:hover {
 
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
-    color: #a4ceac;
+    color: #135680;
 }
 
 hr {
@@ -82,6 +82,14 @@ div.content {
 	background: #222;
 }
 
+#site-head a {
+	color: #fff;
+}
+
+#site-head a:hover {
+	color: #bbb;
+}
+
 .social {
 	background: #333;
 }
@@ -95,7 +103,7 @@ div.content {
 }
 
 .blog-info {
-	background-color: #a4ceac;
+	background-color: #135680;
 }
 
 .blog-info a {
@@ -116,7 +124,7 @@ div.content {
 }
 
 .post-footer {
-	background: #a4ceac;
+	background: #135680;
 	color: #fff;
 }
 
@@ -138,7 +146,7 @@ div.content {
 }
 
 .pagination {
-	background: #a4ceac;
+	background: #135680;
 }
 
 .pagination a.to-top {
