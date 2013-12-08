@@ -30,8 +30,11 @@
 	    	</section>
 	    	
 	    	<section class="header">
-	    		{{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}" title="{{@blog.title}} Home"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+	    		{{#if @blog.logo}}
+	    		<a id="blog-logo" href="{{@blog.url}}" title="{{@blog.title}} Home"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+	    		{{else}}
 	    		<h1 class="blog-title"><a href="/">{{@blog.title}}</a></h1>
+	    		{{/if}}
 	    		<nav>
 		    	    <a href="#" title="Close" class="close hidden" data-block="close"><i class="fa fa-times"></i></a>
 	    		    <a href="#" title="Show Nav" class="social-nav" data-block="social"><i class="fa fa-bars"></i></a>
