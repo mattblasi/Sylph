@@ -68,8 +68,16 @@
         
         /* Site Social Links */
         (function() {
-        	$('#site-head .social a[href*=your-link-url]').remove();
-        	if($('#site-head .socail').length == 0) {
+        	var count = 0;
+        	$('#site-head .social a').each(function(){
+        		var link = $(this).attr('href');
+	        	if (link == 'your-link-url'){
+	        		$(this).remove();
+	        	} else {
+	        		count++;
+	        	}
+        	});
+        	if(count == 0) {
         		$('#site-head .social').remove();
         		$('#site-head nav .social-nav').remove();
         	}

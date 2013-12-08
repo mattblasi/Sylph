@@ -998,6 +998,10 @@ div.content {
 	display: none;
 }
 
+#social-twitter-tweet a {
+	color: #bbb;
+}
+
 
 /* ==========================================================================
    9. Media Queries - Smaller than 900px
